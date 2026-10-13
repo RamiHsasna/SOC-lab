@@ -1,3 +1,13 @@
+# 👨‍💻SOC Home lab
+
+## Table of Contents
+
+1. [Overview](#project-overview)
+2. [Topology](#soc-lab-topology)
+3. [Step 1: Setting up VMs](#step-1-setting-up-virtual-machines)
+4. [Step 2: Setting up Wazuh](#step-2--setting-up-wazuh)
+5. [Step 3: Swithing to Internal Networks](#step-3-switching-to-internal-network-and-assigning-static-ips)
+
 ## 📌Project Overview
 
 This lab is a self-contained, three-VM security environment built entirely in VirtualBox. The goal is to simulate a realistic attack-and-defend scenario: one machine acts as a vulnerable target, one acts as the attacker, and one serves as the monitoring and detection hub. All traffic is isolated on an internal network with no exposure to the host machine or the wider network.
@@ -39,7 +49,7 @@ This lab is a self-contained, three-VM security environment built entirely in Vi
 3. Double-click the **.vbox** file inside - this-auto imports Kali into VirtualBox :
 
 - **Network:** Set temporarily to NAT
-- Default credentials are : username **kali**, password **kali**
+- **Default credentials** are : username **kali**, password **kali**
 
 ## Step 2 : Setting up Wazuh
 
@@ -143,3 +153,5 @@ Find the <server> block and set:
 sudo systemctl enable wazuh-agent
 sudo systemctl start wazuh-agent
 ```
+
+## Step 3: Switching to Internal Network and Assigning Static IPs
